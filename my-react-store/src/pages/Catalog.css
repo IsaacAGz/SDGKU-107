@@ -1,0 +1,4 @@
+.product-catalog{
+    display: flex;
+    justify-content: space-evenly;
+}
