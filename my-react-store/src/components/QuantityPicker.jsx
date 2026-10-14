@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function QuantityPicker() {
 
-    const [quantity, setQuantity] = useState (1);
+    const [quantity, setQuantity] = useState (0);
 
     function handleDecrease() {
         let nextValue = quantity - 1;
