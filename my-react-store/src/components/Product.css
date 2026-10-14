@@ -1,0 +1,15 @@
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5; 
+  background-color: #f3f4f6; 
+  overflow: hidden;
+}
+
+.product-image {
+  width: 20rem;
+  height: 25rem;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}

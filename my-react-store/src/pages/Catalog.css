@@ -1,4 +1,18 @@
-.product-catalog{
-    display: flex;
-    justify-content: space-evenly;
+.catalog-container {
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+.catalog-container h4 {
+    margin: 0 0 1.75rem;
+    font-family: var(--heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
 }

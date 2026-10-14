@@ -9,7 +9,7 @@ function QuantityPicker() {
         let nextValue = quantity - 1;
 
         if (nextValue <= 0) {
-            nextValue = 1;
+            nextValue = 0;
         }
 
         setQuantity(nextValue);
@@ -22,9 +22,9 @@ function QuantityPicker() {
 
     return (
         <div className="quantity-picker">
-            <button className="btn-minus" onClick={handleDecrease}>-</button>
+            <button className="btn btn-primary btn-minus" onClick={handleDecrease}>-</button>
             <label className="label-qty">{quantity}</label>
-            <button className="btn-plus" onClick={handleIncrease}>+</button>
+            <button className="btn btn-primary btn-plus" onClick={handleIncrease}>+</button>
         </div>
     )
 }
