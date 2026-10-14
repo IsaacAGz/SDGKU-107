@@ -13,7 +13,7 @@ function Product(props) {
                 <label>{props.data.price}.00</label><br></br>
                 <label>Total</label>
             </div>
-            <QuantityPicker/>
+            <QuantityPicker data={props.data} onAddToCart={props.onAddToCart} />
         </div>
     )
 }

@@ -1,3 +1,45 @@
+.product-container {
+  font-family: var(--sans);
+  color: var(--text-h);
+}
+
+.product-container h5 {
+  margin: 0.85rem 0 0.2rem;
+  font-family: var(--heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text-h);
+}
+
+.product-container .prices label {
+  font-family: var(--sans);
+  color: var(--text-h);
+}
+
+.product-container .prices label:first-of-type {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+.product-container .prices label:last-of-type {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.product-container .label-qty,
+.product-container .add-cart .btn,
+.product-container .btn-minus,
+.product-container .btn-plus {
+  font-family: var(--sans);
+}
+
 .product-image-wrapper {
   position: relative;
   width: 100%;

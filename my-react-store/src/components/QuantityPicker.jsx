@@ -1,7 +1,7 @@
 import "./QuantityPicker.css";
 import { useState } from "react";
 
-function QuantityPicker() {
+function QuantityPicker(props) {
 
     const [quantity, setQuantity] = useState (0);
 
@@ -20,12 +20,22 @@ function QuantityPicker() {
         setQuantity(nextValue);
     }
 
+    function addToCart() {
+        props.onAddToCart(props.data, quantity);
+        setQuantity(0);
+    }
+
     return (
-        <div className="quantity-picker">
-            <button className="btn btn-primary btn-minus" onClick={handleDecrease}>-</button>
-            <label className="label-qty">{quantity}</label>
-            <button className="btn btn-primary btn-plus" onClick={handleIncrease}>+</button>
-        </div>
+        <div className="product-buttons">
+            <div className="quantity-picker">
+                <button className="btn btn-primary btn-minus" onClick={handleDecrease}>-</button>
+                <label className="label-qty">{quantity}</label>
+                <button className="btn btn-primary btn-plus" onClick={handleIncrease}>+</button>
+            </div>
+            <div className="add-cart">
+                <button className="btn btn-primary" onClick={addToCart}>Add Items to Cart</button>
+            </div>      
+        </div>    
     )
 }
 
