@@ -1,0 +1,43 @@
+.not-found-page {
+    width: min(640px, 100%);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.not-found-code {
+    margin: 0;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.not-found-page h1 {
+    margin: 0.25rem 0 0.75rem;
+}
+
+.not-found-page p {
+    margin-bottom: 1.5rem;
+}
+
+.not-found-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.not-found-links a {
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.not-found-links a:hover {
+    background: var(--accent-bg);
+}

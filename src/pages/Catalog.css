@@ -1,0 +1,26 @@
+.catalog-container {
+    width: min(1126px, 100%);
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+    box-sizing: border-box;
+}
+
+.catalog-container h4 {
+    margin: 0 0 0.5rem;
+    font-family: var(--heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.catalog-lead {
+    max-width: 36rem;
+    margin: 0 auto 1.75rem;
+}
+
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
