@@ -1,7 +1,6 @@
 import "./Product.css";
 import QuantityPicker from "./QuantityPicker";
 
-
 function Product(props) {
     return(
         <div className="product-container">

@@ -1,7 +1,12 @@
 import { NavLink } from "react-router";
+import { useContext } from 'react';
+
+import GlobalContext from '../state/globalContext';
 import "./Navbar.css";
 
 function Navbar() {
+    const userInformation = useContext(GlobalContext).user;
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light store-navbar">
             <NavLink className="navbar-brand" to="/">
@@ -21,7 +26,14 @@ function Navbar() {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/contact">Contact</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/admin">Admin</NavLink>
+                    </li>
                 </ul>
+            </div>
+                {userInformation.name}
+            <div>
+
             </div>
         </nav>
     );

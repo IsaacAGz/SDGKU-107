@@ -1,6 +1,13 @@
+import { useContext } from 'react';
+import { Link } from 'react-router'
+
+import GlobalContext from '../state/globalContext';
+
 import './About.css';
 
 function About() {
+    const userInformation = useContext(GlobalContext).user;
+
     return (
         <main className="about-page">
             <h1>About us</h1>
@@ -8,6 +15,11 @@ function About() {
                 This store is a class project for Cohort 71, Course 109.
                 It has been in progress since 2026.
             </p>
+
+            <p>My name is {userInformation.name}</p>
+            <p>Cohort {userInformation.id}</p>
+
+            <Link to="/catalog" className="btn-solid theme-inverse m-5">Visit Catalog</Link>
 
             <div className="about-cards">
                 <article>
