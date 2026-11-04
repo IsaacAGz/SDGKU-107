@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { useContext } from 'react';
+import { IconShoppingCart } from '@tabler/icons-react';
 
 import GlobalContext from '../state/globalContext';
 import "./Navbar.css";
@@ -33,6 +34,10 @@ function Navbar() {
             </div>
                 {userInformation.name}
             <div>
+
+            <NavLink to="/cart" className="btn-subtle theme-inverse">
+                <IconShoppingCart />
+            </NavLink>
 
             </div>
         </nav>

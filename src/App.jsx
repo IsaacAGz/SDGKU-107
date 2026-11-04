@@ -7,6 +7,7 @@ import About from './pages/About';
 import Catalog from './pages/Catalog';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 
 import Navbar from './components/Navbar';
@@ -30,6 +31,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/catalog" element={<Catalog />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

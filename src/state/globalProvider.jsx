@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
-import GlobalContext from './globalContext'
+import GlobalContext from './globalContext';
 
 function GlobalProvider(props) {
     const [cart, setCart] = useState([])
     const [user, setUser] = useState({name: "Isaac", id: 71})
 
-    function addProductToCart() {
-
+    function addProductToCart(product) {
+        setCart([...cart , product])
     }
 
     function clearCart() {
