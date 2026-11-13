@@ -5,6 +5,7 @@ import GlobalContext from '../state/globalContext';
 function Cart(){
 
     const globalCart = useContext(GlobalContext).cart;
+    const removeProductFromCart = useContext(GlobalContext).removeProductFromCart;
 
     function getTotalItems() {
         let total = 0
@@ -39,7 +40,7 @@ function Cart(){
                             <span>{item.title}</span>
                             <span>{item.quantity} × ${item.price.toFixed(2)}</span>
                             <span>${lineTotal.toFixed(2)}</span>
-                            <button className="btn-solid theme-danger pe-4">Delete</button>
+                            <button className="btn-solid theme-danger pe-4" onClick={() => removeProductFromCart(item._id)}>Delete</button>
                         </li>
                     );
                 })}

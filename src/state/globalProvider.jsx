@@ -14,8 +14,8 @@ function GlobalProvider(props) {
         setCart([])
     }
 
-    function removeProductFromCart() {
-
+    function removeProductFromCart(id) {
+        setCart(prevCart => prevCart.filter(item => item._id !== id))
     }
 
     return(
