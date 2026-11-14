@@ -7,7 +7,16 @@ function GlobalProvider(props) {
     const [user, setUser] = useState({name: "Isaac", id: 71})
 
     function addProductToCart(product) {
-        setCart([...cart , product])
+        setCart(prevCart => {
+            const exists = prevCart.some(item => item._id === product._id)
+            if (!exists) return [...prevCart, product]
+
+            return prevCart.map(item =>
+                item._id === product._id
+                    ? { ...item, quantity: item.quantity + product.quantity }
+                    : item
+            )
+        })
     }
 
     function clearCart() {
