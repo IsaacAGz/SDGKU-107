@@ -3,7 +3,7 @@ const catalog = [
         "title": "Oranges",
         "category": "fruit",
         "price": 3.00,
-        "image": "oranges.jpg",
+        "image": "Oranges.webp",
         "_id": "1"
     },
     
@@ -11,7 +11,7 @@ const catalog = [
         "title": "Shampoo",
         "category": "hygene",
         "price": 6.00,
-        "image": "shampoo.png",
+        "image": "Shampoo.webp",
         "_id": "2"
     },
     
@@ -19,7 +19,7 @@ const catalog = [
         "title": "Pencil",
         "category": "office supply",
         "price": 2.00,
-        "image": "pencil.jpg",
+        "image": "Pencils.webp",
         "_id": "3"
     }
 

@@ -5,6 +5,57 @@
     box-sizing: border-box;
 }
 
+.home-hero {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.home-hero-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1024 / 572;
+    object-fit: cover;
+}
+
+/* Text sits on the empty left side of the photo */
+.home-hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 2rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.home-hero-content .home-lead {
+    margin: 0 0 1.5rem;
+    color: #2b2b2b;
+}
+
+.home-hero-content h1 {
+    color: #1a1a1a;
+}
+
+/* On narrow screens, stack the text under the photo */
+@media (max-width: 720px) {
+    .home-hero {
+        text-align: center;
+    }
+
+    .home-hero-content {
+        position: static;
+        width: 100%;
+        align-items: center;
+        padding: 1.5rem 1rem;
+    }
+}
+
 .home-kicker {
     margin: 0;
     color: var(--accent);

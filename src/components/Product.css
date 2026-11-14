@@ -55,3 +55,25 @@
   object-position: center;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* "Add to cart" button: turns green and pops when items are added */
+.add-cart-btn {
+  transition: background-color 0.25s ease;
+}
+
+.add-cart .add-cart-btn.added {
+  background: #1f9d55;
+  animation: add-cart-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes add-cart-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.94); }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .add-cart .add-cart-btn.added {
+    animation: none;
+  }
+}
